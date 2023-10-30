@@ -1,5 +1,160 @@
-template-repository (1.0-1) unstable; urgency=medium
+libtest-lwp-useragent-perl (0.036-1) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.5.1, no changes needed.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ gregor herrmann ]
+  * Import upstream version 0.036.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.6.0.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 20 Jan 2022 20:36:41 +0100
+
+libtest-lwp-useragent-perl (0.034-1) unstable; urgency=medium
+
+  * debian/watch: use uscan version 4.
+  * Import upstream version 0.034.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.5.0.
+  * Set Rules-Requires-Root: no.
+  * Drop unneeded version constraints from (build) dependencies.
+  * Annotate test-only build dependencies with <!nocheck>.
+  * Bump debhelper-compat to 12.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+  * Remove unneeded version constraint from a build dependency.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 07 Mar 2020 13:27:27 +0100
+
+libtest-lwp-useragent-perl (0.033-2) unstable; urgency=medium
+
+  [ Damyan Ivanov ]
+  * declare conformance with Policy 4.1.3 (no changes needed)
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * Set NO_NETWORK_TESTING=1 during build and autopkgtest to make sure
+    network tests are skipped. For some reason, they were run under
+    autopkgtest and caused occasional failures.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.1.4.
+  * Let cme fix an alternative versioned build dependency.
+  * Bump debhelper compatibility level to 10.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 01 May 2018 17:34:41 +0200
+
+libtest-lwp-useragent-perl (0.033-1) unstable; urgency=medium
+
+  * Import upstream version 0.033.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.0.0.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 03 Aug 2017 22:50:14 -0400
+
+libtest-lwp-useragent-perl (0.031-1) unstable; urgency=medium
+
+  * Import upstream version 0.031.
+  * Update build dependencies.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 15 Nov 2016 20:31:21 +0100
+
+libtest-lwp-useragent-perl (0.030-2) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Remove Oleg Gashev from Uploaders. Thanks for your work!
+  * Fix autopkgtest: add debian/tests/pkg-perl/smoke-files.
+    The smoke tests also need the examples/ directory. (Closes: #842461)
+  * Add /me to Uploaders.
+  * Remove unnecessary version constraints in debian/control.
+  * Declare compliance with Debian Policy 3.9.8.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 29 Oct 2016 16:54:22 +0200
+
+libtest-lwp-useragent-perl (0.030-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Lucas Kanashiro ]
+  * Import upstream version 0.030
+
+  [ gregor herrmann ]
+  * Update build and runtime requirements.
+
+ -- Lucas Kanashiro <kanashiro.duarte@gmail.com>  Wed, 26 Aug 2015 16:38:43 -0300
+
+libtest-lwp-useragent-perl (0.029-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ Lucas Kanashiro ]
+  * Add debian/upstream/metadata
+  * Import upstream version 0.029
+  * Declare compliance with Debian policy 3.9.6
+  * Bump debhelper compatibility level to 9
+  * Add autopkgtest-pkg-perl
+  * Update build dependencies
+
+ -- Lucas Kanashiro <kanashiro.duarte@gmail.com>  Sat, 15 Aug 2015 12:55:34 -0300
+
+libtest-lwp-useragent-perl (0.025-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update years of upstream copyright.
+  * Drop libmodule-build-tiny-perl build dependency. Accordingly lower
+    debhelper version / compat level.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 20 Jul 2014 00:06:56 +0200
+
+libtest-lwp-useragent-perl (0.023-1) unstable; urgency=medium
+
+  * Team upload.
+  * Install CONTRIBUTING file.
+  * debian/control: bump required debhelper version for
+    Module::Build::Tiny to 9.20140227.
+  * Strip trailing slash from metacpan URLs.
+  * New upstream release.
+  * Update build dependencies.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 06 Apr 2014 19:00:18 +0200
+
+libtest-lwp-useragent-perl (0.022-1) unstable; urgency=low
+
+  * Team upload.
+
+  * New upstream release.
+  * Update build and runtime dependencies.
+  * Declare compliance with Debian Policy 3.9.5.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 24 Nov 2013 17:50:10 +0100
+
+libtest-lwp-useragent-perl (0.19-1) unstable; urgency=low
+
+  [ Oleg Gashev ]
+  * New upstream release.
+  * debian/control file - updated Build-Depends: added
+    libmodule-build-tiny-perl (>= 0.025).
+  * debian/control file - updated Build-Depends-Indep: added
+    libcapture-tiny-perl, updated version of libtest-checkdeps-perl and
+    replaced perl to perl (>= 5.11.1) | libtest-simple-perl (>= 0.94).
+
+  [ gregor herrmann ]
+  * Bump debhelper build dependency to 9.20130630 for Module::Build::Tiny
+    support.
+
+ -- Oleg Gashev <oleg@gashev.net>  Wed, 21 Aug 2013 15:01:52 -0400
+
+libtest-lwp-useragent-perl (0.18-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #708280)
+
+ -- Oleg Gashev <oleg@gashev.net>  Mon, 20 May 2013 14:14:32 +0000

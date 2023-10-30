@@ -1,4 +1,15 @@
 #!/usr/bin/make -f
 
+PACKAGE = $(shell dh_listpackages)
+TMP     = $(CURDIR)/debian/$(PACKAGE)
+
 %:
 	dh $@
+
+override_dh_auto_test:
+	NO_NETWORK_TESTING=1 dh_auto_test
+
+override_dh_auto_install:
+	dh_auto_install
+	rm -f $(TMP)/usr/share/perl5/Test/LWP/advent_2012.pod
+	rm -f $(TMP)/usr/share/man/man3/Test::LWP::advent_2012.3pm
